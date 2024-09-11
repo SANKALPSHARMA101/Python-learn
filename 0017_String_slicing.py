@@ -4,7 +4,7 @@ name = "sankalp is a student"
 print(name[2:5])
 print(name[-5:-2])
 print(len(name))
-print(name.capitalize())  # First letter of the string gets capitalized
+print(name.capitalize())    # First letter of the string gets capitalized
 print(name.upper())     # All letters in string get capitalized
 print(name.lower())     # All letters in string get lower-case
 print(name.title())     
