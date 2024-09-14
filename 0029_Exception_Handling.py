@@ -11,3 +11,5 @@ try:
     print(new_one.read())
 except:
     print("Error opening file!!")
+finally:
+    print("Finally saying goodbye!!")
