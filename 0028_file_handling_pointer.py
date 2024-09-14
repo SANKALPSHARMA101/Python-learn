@@ -1,6 +1,7 @@
 import sys
 import pickle
 # new_one = open("c:\\SAMPLE\\new_one\\Answer.txt", "w")
+new_one = open("c:\\SAMPLE\\new_one\\Marks.txt", "r")
 # line1 = new_one.readline()
 # line2 = new_one.readline()
 # sys.stdout.write(line1)
@@ -8,7 +9,6 @@ import pickle
 # sys.stderr.write("No error occurred\n")
 # with open("c:\\SAMPLE\\new_one\\Answer.txt","w") as new_one:
 #     new_one.write("Hi there!!")
-# new_one.close()
 # emp1 = {"Empno":1201,"Name":"Anushree","Age":25,"Salary":47000}
 # emp2 = {"Empno":1211,"Name":"Zoya","Age":30,"Salary":48000}
 # emp3 = {"Empno":1251,"Name":"Simarjeet","Age":27,"Salary":49000}
@@ -31,11 +31,15 @@ import pickle
 #     pickle.dump(stu, stu_file)
 #     ans = input("Do you want to enter more records? (y/n)")
 # stu_file.close()
-emp = {}
-emp_file = open("c:\\SAMPLE\\new_one\\emp.dat","rb")
-try:
-    while True:
-        emp = pickle.load(emp_file)
-        print(emp)
-except EOFError:
-    emp_file.close()
+# emp = {}
+# emp_file = open("c:\\SAMPLE\\new_one\\emp.dat","rb")
+# try:
+#     while True:
+#         emp = pickle.load(emp_file)
+#         print(emp)
+# except EOFError:
+#     emp_file.close()
+print("Initially file-pointer's position is at:", new_one.tell())
+print("Three bytes read are:",new_one.read(3))
+print("After previous read, current position of file pointer:",new_one.tell())
+new_one.close()
