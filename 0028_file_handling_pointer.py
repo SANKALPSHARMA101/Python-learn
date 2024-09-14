@@ -1,5 +1,6 @@
 import sys
 import pickle
+import csv
 # new_one = open("c:\\SAMPLE\\new_one\\Answer.txt", "w")
 # new_one = open("c:\\SAMPLE\\new_one\\myfile.txt", "wb")
 # line1 = new_one.readline()
@@ -48,4 +49,13 @@ import pickle
 # new_one.seek(10, 0)
 # new_one.seek(-5, 1)
 new_one = open("c:\\SAMPLE\\new_one\\myfile.csv", "w")
+stuwriter = csv.writer(new_one)
+stuwriter.writerow(['Rollno','Name','Marks'])
+for i in range(3):
+    print("Student record:",(i+1))
+    rollno = int(input("Enter the roll no of student:"))
+    name = input("Enter the name of the student:")
+    marks = float(input("Enter the marks of the student:"))
+    sturec = [rollno,name,marks]
+    stuwriter.writerow(sturec)
 new_one.close()
